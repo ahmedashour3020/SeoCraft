@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة غير موجودة</title>
+		<meta name="google-site-verification" content="N0Q1478cbTUUKU3gwJjjovsoUkan-YmqMZfcYZh0ebk" />
+	
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H1TP1LM0WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H1TP1LM0WX');
+</script>
+</head>
+<body>
+    <h1>الصفحة غير موجودة</h1>
+    <p>جارٍ إعادة توجيهك...</p>
+
+    <script>
+        // الحصول على عنوان URL المطلوب
+        const path = window.location.pathname;
+
+        // نظام إعادة التوجيه بناءً على الروابط
+        const redirects = {
+            "/old-page": "/new-page",
+            "/another-old-page": "/another-new-page"
+        };
+
+        // إعادة التوجيه إذا كانت الصفحة ضمن النظام
+        if (redirects[path]) {
+            window.location.href = redirects[path];
+        } else {
+            // إرسال المستخدم إلى الصفحة الرئيسية أو صفحة أخرى في حال عدم توفر إعادة توجيه
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

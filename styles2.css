@@ -1,0 +1,506 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: right;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+h1, h2, h3, h4, h5 {
+    /* font-family: 'Arial', sans-serif; /* الخط الأساسي */
+    font-weight: bold; /* تثقيل النص */
+    margin: 20px 0; /* المسافات العلوية والسفلية */
+    line-height: 1.3; /* ارتفاع السطر لتحسين القراءة */
+    position: relative;
+    text-transform: capitalize; /* كتابة أول حرف من كل كلمة بحروف كبيرة */
+    transition: color 0.3s ease; /* تأثير سلس عند تغيير اللون */
+}
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #feb47b; /* خط سفلي */
+    padding-bottom: 10px; /* مسافة تحت النص */
+}
+
+h3 {
+    font-size: 1.75em;
+    background: linear-gradient(120deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* تدرج لوني داخل النص */
+}
+
+h4 {
+    font-size: 1.5em;
+    position: relative;
+    padding-left: 20px; /* مسافة بادئة */
+}
+
+h4::before {
+    content: "⭐"; /* رمز زخرفي قبل العنوان */
+    position: absolute;
+    left: 0;
+}
+
+h5 {
+    font-size: 1.25em;
+    letter-spacing: 1px; /* تباعد بين الأحرف */
+    font-style: italic; /* ميلان النص */
+}
+
+.article {
+    padding: 20px;
+    background-color: #f8f9fa; /* لون الخلفية للمقالة */
+    border: 1px solid #ddd; /* حدود خفيفة */
+    border-radius: 8px; /* زوايا مستديرة */
+    margin-bottom: 20px; /* مسافة بين العناصر */
+	font-size: 18px; /* حجم النص */
+}
+/* تنسيق قائمة ul داخل .article */
+.article ul {
+    list-style: none; /* إزالة النقاط الافتراضية */
+    padding: 0;
+    margin: 0;
+}
+.article ol {
+    list-style: none; /* إزالة النقاط الافتراضية */
+    padding: 0;
+    margin: 0;
+}
+
+/* تنسيق العناصر li داخل .article */
+.article li {
+    background-color: #f0f0f0; /* لون الخلفية */
+    margin: 10px 0; /* مسافات بين العناصر */
+    padding: 15px 35px; /* المسافات الداخلية */
+    font-size: 18px; /* حجم النص */
+    font-weight: bold;
+    color: #333; /* لون النص */
+    border-radius: 8px; /* زوايا مستديرة */
+    position: relative;
+    overflow: hidden; /* إخفاء الزوائد عند التحريك */
+    transition: all 0.3s ease; /* إضافة تأثير سلس */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+/* تأثير التحويم للعناصر li */
+.article li:hover {
+    background-color: #4a90e2; /* تغيير لون الخلفية عند التمرير */
+    color: #fff; /* تغيير لون النص عند التمرير */
+    transform: translateY(-5px); /* رفع العنصر لأعلى */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+}
+
+/* تأثير خط التحريك عند التمرير */
+.article li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* تدرج اللون */
+    top: 0;
+    left: -100%; /* البدء من خارج الإطار */
+    transition: all 0.4s ease-in-out; /* سرعة وتأثير التحريك */
+}
+
+.article li:hover::before {
+    left: 0; /* تحريك الخط ليظهر من اليسار إلى اليمين */
+}
+
+/* تأثير التنقيط أو الأيقونات */
+.article li::after {
+    content: "★"; /* يمكن استخدام أيقونة أو نص */
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px; /* حجم الأيقونة */
+    color: #ff7e5f; /* لون الأيقونة */
+    transition: color 0.3s ease; /* تغيير لون الأيقونة عند التمرير */
+}
+.article li ul li::after {
+    content: "⭀"; /* يمكن استخدام أيقونة أو نص */
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px; /* حجم الأيقونة */
+    /* color: #ff7e5f; /* لون الأيقونة */
+	color: #333; /* لون الأيقونة */
+    transition: color 0.3s ease; /* تغيير لون الأيقونة عند التمرير */
+}
+
+
+.article li:hover::after {
+    color: #feb47b; /* تغيير اللون عند التمرير */
+}
+
+/* تنسيق خاص للقوائم الفرعية */
+.article li ul {
+    margin-top: 10px; /* مسافة أعلى القائمة الفرعية */
+    /* padding-left: 20px;  /* المسافة الداخلية من اليسار */
+    /* border-left: 3px solid #ff7e5f; /* شريط جانبي يميز القائمة الفرعية */
+    background-color: #e8f4fc; /* لون خلفية خفيف */
+    border-radius: 5px;
+	width: 95%;
+}
+
+/* تنسيق العناصر داخل القوائم الفرعية */
+.article li ul li {
+    background-color: transparent; /* إزالة لون الخلفية للعناصر الفرعية */
+    margin: 5px 0; /* مسافة بين العناصر الفرعية */
+    padding: 10px 15px; /* مسافة داخلية */
+    font-size: 16px; /* حجم النص للعناصر الفرعية */
+    font-weight: normal; /* خط النص أخف للعناصر الفرعية */
+    color: #555; /* لون النص */
+    border-radius: 4px; /* زوايا مستديرة بسيطة */
+    transition: background-color 0.3s ease;
+
+}
+
+/* تأثير التحويم للعناصر الفرعية */
+.article li ul li:hover {
+    background-color: #dceeff; /* تغيير لون الخلفية عند التمرير على العنصر الفرعي */
+    color: #333; /* تغيير لون النص */
+}
+
+/* تأثير خاص للقائمة الفرعية أثناء التحويم */
+.article li:hover ul {
+    display: block; /* إظهار القائمة الفرعية عند التمرير */
+    opacity: 1; /* تعيين الشفافية */
+    transform: translateY(0); /* عرض القائمة من نفس الموقع */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* كود .custom-list لتصميم قائمة مخصصة */
+.custom-list {
+    list-style: none; /* إزالة النقاط الافتراضية */
+    padding: 0;
+    margin: 0;
+}
+
+.custom-list li {
+    background-color: #f7f7ff; /* لون خلفية مميز */
+    margin: 8px 0; /* مسافة بين العناصر */
+    padding: 10px 10px 10px 35px; /* المسافات الداخلية */
+    font-size: 17px; /* حجم النص */
+    color: #444; /* لون النص */
+    border-left: 4px solid #6a0dad; /* شريط جانبي ملون */
+    border-radius: 6px; /* زوايا مستديرة */
+    position: relative;
+    transition: all 0.3s ease; /* تأثير سلس عند التحويم */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* ظل خفيف */
+}
+
+/* تأثير التحويم */
+.custom-list li:hover {
+    background-color: #6a0dad; /* تغيير لون الخلفية عند التمرير */
+    color: #fff; /* تغيير لون النص عند التمرير */
+    transform: translateX(5px); /* تحريك العنصر قليلاً عند التمرير */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3); /* زيادة الظل */
+}
+
+/* تأثير خط تحريك خاص */
+.custom-list li::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: #ff7e5f; /* لون مميز للخط */
+    top: 0;
+    left: 0;
+    border-radius: 6px 0 0 6px; /* زوايا مستديرة لخط التحريك */
+    transform: scaleY(0); /* بدأ من حجم صغير */
+    transition: transform 0.3s ease-in-out; /* تأثير التحريك */
+}
+
+.custom-list li:hover::before {
+    transform: scaleY(1); /* تكبير الخط عند التمرير */
+}
+
+/* إضافة أيقونة أو علامة قبل كل عنصر */
+.custom-list li::after {
+    content: "✔"; /* يمكن تغيير العلامة لأيقونة أخرى */
+    position: absolute;
+    left: 15px; /* محاذاة إلى اليمين */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #ff7e5f; /* لون الأيقونة */
+    transition: color 0.3s ease; /* تغيير لون الأيقونة عند التمرير */
+}
+
+.custom-list li:hover::after {
+    color: #feb47b; /* تغيير لون الأيقونة عند التمرير */
+}
+
+/* كود .attention-effect لتأثير التحريك التلقائي */
+.attention-effect {
+    display: inline-block;
+    animation: pulse 1.5s infinite; /* تطبيق تأثير النبض التلقائي */
+    transition: box-shadow 0.3s ease; /* تأثير الظل */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* ظل أساسي */
+}
+
+/* تأثير النبض */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* الحجم الأساسي */
+    }
+    50% {
+        transform: scale(1.1); /* تكبير بسيط عند النبض */
+    }
+}
+
+/* تأثير إضافي عند التمرير لزيادة التفاعل */
+.attention-effect:hover {
+    transform: scale(1.1); /* تكبير إضافي عند التمرير */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التمرير */
+}
+
+
+/* القيم الأساسية لجميع الشاشات */
+img {
+    max-width: 900px; /* الحد الأقصى لعرض الصورة */
+    max-height: 500px; /* الحد الأقصى لارتفاع الصورة */
+    width: 100%; /* جعل الصورة تستجيب لعرض العنصر الأب */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+	    transition: transform 0.3s ease; /* إضافة تأثير التدرج للتحكم في نعومة التكبير */
+
+}
+
+/* تأثير التكبير عند تمرير الماوس */
+img:hover {
+      transform: scale(1.4); /* تكبير بنسبة 20% */
+	    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* إضافة ظل خفيف حول الصورة */
+    cursor: pointer; /* تغيير شكل مؤشر الماوس */
+}
+
+/* للأجهزة اللوحية والشاشات المتوسطة (768px إلى 1024px) */
+@media (max-width: 1024px) {
+    img {
+        max-width: 700px; /* تقليل العرض الأقصى للأجهزة المتوسطة */
+        max-height: 350px; /* تقليل الارتفاع الأقصى بشكل نسبي */
+    }
+}
+
+/* شاشات الموبايل الكبيرة (بين 480px و768px) */
+@media (max-width: 768px) {
+    img {
+        max-width: 500px; /* عرض أصغر قليلاً لشاشات الموبايل الكبيرة */
+        max-height: 300px;
+    }
+}
+
+/* شاشات الموبايل الصغيرة (أقل من 480px) */
+@media (max-width: 480px) {
+    img {
+        max-width: 100%; /* الصورة تمتد بعرض العنصر الأب */
+        max-height: auto; /* ضبط الارتفاع تلقائياً للحفاظ على التناسب */
+    }
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.list-group-item i {
+    color: #007bff;
+    margin-left: 10px;
+}
+
+.list-group-item:hover {
+    transform: scale(1.02);
+}
+
+#seo-importance {
+    background: linear-gradient(to right, #ffdd57, #ffc107);
+}
+
+#seo-importance h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#seo-importance p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#seo-importance .btn {
+    background-color: #333;
+    color: #fff;
+}
+
+#awards, #reviews, #portfolio {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ddd;
+}
+
+footer {
+    background: linear-gradient(to right, #007bff, #0056b3);
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .btn {
+    margin-top: 1rem;
+    background-color: #fff;
+    color: #007bff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+footer .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Add your custom CSS styles here */
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Slider */
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slides vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Make sure the slides can expand based on content */
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto; /* Allow the container to expand based on content */
+}
+
+.swiper-slide img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+.discount del {
+    color: red;
+    text-decoration: line-through;
+}
+
+.discount .price {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* تنسيق قسم آراء العملاء */
+.testimonials-section {
+    background-color: #f7f7f7;
+    padding: 3rem 0;
+	
+}
+
+.testimonials-section2 {
+    background-color: #f7f7f7;
+}
+
+.testimonial-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #fff58166;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+	max-height: 450px;
+	
+}
+
+.testimonial-card2 {
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #fff58166;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+
+	
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 1rem 0;
+}
+
+.client-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.client-position {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+}

@@ -1,0 +1,630 @@
+/* استيراد خط من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام الخط العربي */
+    background-color: #f9f9f9;
+    direction: rtl; /* ضبط اتجاه النصوص من اليمين إلى اليسار */
+    text-align: right; /* محاذاة النص لليمين */
+}
+
+.displayPackages {
+display:none;
+}
+
+.article {
+	background:#fff;
+	padding:25px;
+	border-radius:20px;
+}
+
+.card-img-top {
+	width:  150px;
+	height: 150px;
+	margin:0 auto;
+}
+
+.card-title {text-align:center;}
+.card-text {text-align:center;}
+
+/* نمط الشريط بالكامل */
+.custom-navbar {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* padding: 0.8rem 1rem; */
+}
+
+.ml-auto, .mx-auto {
+    margin-left: 0px !important;
+    margin-right: auto !important;
+}
+
+/* تنسيق الشعار */
+.navbar-brand .brand-name {
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    /* color: #007bff; */
+}
+
+/* تحسين زر القائمة على الموبايل */
+
+.custom-toggler {
+    border: none;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%287, 123, 255, 0.8%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* تنسيق عناصر القائمة */
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    background-color: #e9ecef;
+    border-radius: 10px;
+}
+
+.nav-item {
+    margin-bottom: 0.5rem;
+}
+
+/* الوسائط لجعل النصوص وعناصر القائمة مناسبة للعرض على الموبايل */
+@media (max-width: 768px) {
+    .navbar-brand .brand-name {
+        font-size: 1.1rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-collapse {
+        padding: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+}
+
+h1 {
+    border-bottom: 2px solid #ffa500; /* خط سفلي برتقالي */
+    padding-bottom: 10px;
+    color: #007bff; /* نص أزرق */
+}
+h2 {
+    border-bottom: 2px solid #ffa500; /* خط سفلي برتقالي */
+    padding-bottom: 10px;
+    color: #007bff; /* نص أزرق */
+}
+
+.text-shamel {
+	color: #28a745;
+}
+.baqat {
+	color: #ffaa00 !important;
+}
+
+    /* Styling for accordion */
+    .accordion-item {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+    }
+    .accordion-header {
+        background-color: #4CAF50;
+        color: #fff;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 1.1em;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+    .accordion-header:hover {
+        background-color: #45a049;
+    }
+    .accordion-content {
+        padding: 15px;
+        background-color: #f1f1f1;
+        display: none;
+    }
+
+/* أنماط قسم الملف الشخصي */
+#profile {
+    margin-top: 50px;
+    direction: rtl; /* اتجاه النص */
+    text-align: right; /* محاذاة النص */
+}
+
+#profile .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#profile .card img {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    object-fit: cover;
+    height: 100%;
+}
+
+#profile .card-body {
+    padding: 2rem;
+}
+
+#profile .card-titlex {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff; /* عنوان أزرق */
+}
+
+#profile .card-subtitle {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+#profile .card-textx {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+#profile .list-inline-item {
+    margin-bottom: 0.5rem;
+}
+
+#profile .list-inline-item strong {
+    font-weight: 600;
+}
+
+#profile .card-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#profile .card-text a:hover {
+    text-decoration: underline;
+}
+
+/* أنماط التذييل */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 2rem 0;
+    text-align: center; /* يمكنك تركه كما هو لتكون النصوص في الوسط */
+}
+
+footer h5 {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* أنماط قسم السيرة الذاتية */
+#resume {
+    margin-top: 50px;
+    direction: rtl; /* اتجاه النص */
+    text-align: right; /* محاذاة النص */
+}
+.card-body h3 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.skill-item .progress-title {
+    width: 200px;
+    font-weight: bold;
+}
+
+.progress {
+    flex-grow: 1;
+    height: 25px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    background-color: #007bff; /* تقدم أزرق */
+}
+
+/* أنماط قسم المشاريع */
+#portfolio {
+    margin-top: 50px;
+    direction: rtl; /* اتجاه النص */
+    text-align: right; /* محاذاة النص */
+}
+
+#portfolio .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#portfolio .portfolio-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#portfolio .portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+#portfolio .portfolio-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#portfolio .portfolio-item:hover .portfolio-info {
+    opacity: 1;
+}
+
+#portfolio .portfolio-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#portfolio .portfolio-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* أنماط قسم الاتصال */
+#contact {
+    margin-top: 50px;
+    direction: rtl; /* اتجاه النص */
+    text-align: right; /* محاذاة النص */
+}
+
+/* تنسيق السبينر */
+.spinner-border {
+    margin-right: 8px;
+}
+
+
+#contact-form {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact-form label {
+    font-weight: 600;
+}
+
+#contact-form .form-control {
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+}
+
+#contact-form .btn {
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #007bff; /* زر أزرق */
+    color: white;
+}
+
+#contact-form .btn:hover {
+    background-color: #ffa500; /* برتقالي عند التحويم */
+}
+
+/* تنسيق قسم التواصل عبر واتساب */
+.contact-section {
+    background-color: #f1f5f8;
+    color: #333;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #25D366; /* لون واتساب */
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.qr-container {
+    padding: 10px;
+    border: 2px dashed #25D366;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.qr-container:hover {
+    transform: scale(1.05); /* تأثير تكبير طفيف عند المرور */
+}
+
+.qr-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe56; /* لون أغمق عند التمرير */
+    text-decoration: none;
+}
+
+.btn-whatsapp i {
+    margin-right: 8px;
+}
+
+/* تنسيق قسم الباقات */
+.packages-section {
+    background-color: #f9f9f9;
+}
+
+.packages-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* تنسيق الكروت */
+.package-card {
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.package-card:hover {
+    transform: scale(1.05); /* تكبير عند المرور */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.package-card .card-header {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.price {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    color: #555;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* تنسيق زر الاتصال */
+.package-card .btn {
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning:hover {
+    background-color: #d39e00;
+}
+
+/* تنسيق قسم آراء العملاء */
+.testimonials-section {
+    background-color: #f7f7f7;
+    padding: 3rem 0;
+}
+
+.testimonial-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 1rem 0;
+}
+
+.client-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.client-position {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+}
+
+
+
+
+/* إضافة استعلامات وسائط للرد */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* كود .attention-effect لتأثير التحريك التلقائي */
+.attention-effect {
+    display: inline-block;
+    animation: pulse 1.5s infinite; /* تطبيق تأثير النبض التلقائي */
+    transition: box-shadow 0.3s ease; /* تأثير الظل */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* ظل أساسي */
+}
+
+/* تأثير النبض */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* الحجم الأساسي */
+    }
+    50% {
+        transform: scale(1.1); /* تكبير بسيط عند النبض */
+    }
+}
+
+/* تأثير إضافي عند التمرير لزيادة التفاعل */
+.attention-effect:hover {
+    transform: scale(1.1); /* تكبير إضافي عند التمرير */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التمرير */
+}
+
+
+/* القيم الأساسية لجميع الشاشات */
+.testimonial-card img {
+    max-width: 900px; /* الحد الأقصى لعرض الصورة */
+    max-height: 500px; /* الحد الأقصى لارتفاع الصورة */
+    width: 100%; /* جعل الصورة تستجيب لعرض العنصر الأب */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+	    transition: transform 0.3s ease; /* إضافة تأثير التدرج للتحكم في نعومة التكبير */
+
+}
+
+/* تأثير التكبير عند تمرير الماوس */
+.testimonial-card img:hover {
+      transform: scale(1.4); /* تكبير بنسبة 20% */
+	    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* إضافة ظل خفيف حول الصورة */
+    cursor: pointer; /* تغيير شكل مؤشر الماوس */
+}
+
+/* للأجهزة اللوحية والشاشات المتوسطة (768px إلى 1024px) */
+@media (max-width: 1024px) {
+    .testimonial-card img {
+        max-width: 700px; /* تقليل العرض الأقصى للأجهزة المتوسطة */
+        max-height: 350px; /* تقليل الارتفاع الأقصى بشكل نسبي */
+    }
+}
+
+/* شاشات الموبايل الكبيرة (بين 480px و768px) */
+@media (max-width: 768px) {
+    .testimonial-card img {
+        max-width: 500px; /* عرض أصغر قليلاً لشاشات الموبايل الكبيرة */
+        max-height: 300px;
+    }
+}
+
+/* شاشات الموبايل الصغيرة (أقل من 480px) */
+@media (max-width: 480px) {
+    .testimonial-card img {
+        max-width: 100%; /* الصورة تمتد بعرض العنصر الأب */
+        max-height: auto; /* ضبط الارتفاع تلقائياً للحفاظ على التناسب */
+    }
+}

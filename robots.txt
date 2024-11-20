@@ -1,0 +1,34 @@
+# Description: تحسين فهرسة الموقع في محركات البحث مع حظر الأصول غير الضرورية.
+
+# السماح لجميع محركات البحث بالوصول إلى الموقع
+User-agent: *
+
+# حظر الوصول إلى الملفات غير الضرورية لتحسين الفهرسة
+Disallow: /site.webmanifest
+Disallow: /styles.css
+Disallow: /styles2.css
+
+# حظر الوصول إلى ملفات النظام والملفات غير الضرورية
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /CONTRIBUTING.md
+Disallow: /docs/
+Disallow: /tests/
+
+# حظر الوصول إلى ملفات الأصول التي لا تفيد في السيو
+Disallow: /assets/
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/
+Disallow: /old/
+
+# حظر الوصول إلى ملفات الأنماط الخارجية (Bootstrap)
+Disallow: https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css
+
+# السماح بمحركات البحث بالوصول إلى الصفحات الأساسية فقط
+Allow: /index.html
+Allow: /privacy-policy.html
+Allow: /terms-of-use.html
+
+# الإشارة إلى ملف Sitemap لتحسين الفهرسة
+Sitemap: https://seocraft.net/sitemap.xml
