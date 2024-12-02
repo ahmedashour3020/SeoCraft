@@ -9,7 +9,7 @@ body {
 }
 
 .displayPackages {
-display:none;
+display:block;
 }
 
 .article {
