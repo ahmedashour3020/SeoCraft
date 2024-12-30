@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مبروك!</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Tajawal', sans-serif;
+        }
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .offer-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+        .offer-card h1 {
+            font-size: 2.5rem;
+            color: #007bff;
+        }
+        .offer-card p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #ff0000;
+        }
+        .question {
+            font-weight: bold;
+        }
+        .btn-custom {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="offer-card">
+        <h1>مبروك! 🎉</h1>
+        <p>انت من العملاء المحظوظين للحصول على هذا العرض  <span class="highlight">بخصم الـ 50%</span>.</p>
+        <p class="question">هل انت مستعد للحصول على اقوى عرض لدراسات الجدوى الاحترافية الكاملة لأفضل المشاريع الربحية على الاطلاق؟</p>
+        <div class="d-grid gap-3">
+            <button class="btn btn-primary btn-custom" onclick="redirectToOffer()">نعم، اريد ان ارى العرض</button>
+            <button class="btn btn-secondary btn-custom" onclick="redirectToOffer()">لا شكرا لا اريد</button>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function redirectToOffer() {
+        window.location.href = "https://bit.ly/offer-study";
+    }
+</script>
+</body>
+</html>
