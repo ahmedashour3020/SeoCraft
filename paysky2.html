@@ -8,11 +8,11 @@
     <script src="https://red3.paysky.io:3011/LB/js/Lightbox.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script type="text/javascript">
-        var AmountTrxn = "";
+        var AmountTrxn = "100";
         var MID =  "26764270786";
         var TID = "99735010";
         var Secret =  "def6c0dacbf4d276c056a556964643d2" 
-        var MerchantReference = ""
+        var MerchantReference = "SEOCRAFT"
         var TrxDateTime = new Date().toGMTString();
         var SecureHash = generateSecureHash(TrxDateTime, AmountTrxn, MerchantReference, MID, TID, Secret);
         
@@ -65,10 +65,11 @@
         }
     </script>
 </head>
-<body>
+<body> 
+<p>
 بوابة دفع paysky
 Test-Sample Code to make Transaction using JS function1-V1.1 2.html
-
+</p>
     <button onclick="showLightBox()">
         Make Transaction
     </button>
