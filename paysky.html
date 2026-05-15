@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>PAYSKY - Sample Code to make Transaction using JS function</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://red3.paysky.io:3011/LB/js/Lightbox.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script type="text/javascript">
+        var AmountTrxn = "";
+        var MID =  "26764270786";
+        var TID = "99735010";
+        var Secret =  "def6c0dacbf4d276c056a556964643d2" 
+        var MerchantReference = ""
+        var TrxDateTime = new Date().toGMTString();
+        var SecureHash = generateSecureHash(TrxDateTime, AmountTrxn, MerchantReference, MID, TID, Secret);
+        
+        console.warn("Please Don't Use Secret on JavaScript")
+        console.log("Generated SecureHash:", SecureHash);
+        
+        Lightbox.Checkout.configure = {
+            MID: MID,
+            TID: TID,
+            AmountTrxn: AmountTrxn,
+            SecureHash: SecureHash,
+            MerchantReference: MerchantReference,
+            TrxDateTime: TrxDateTime,
+            completeCallback: function (data) {
+                console.log('completed');
+                console.log(data);
+            },
+            errorCallback: function (error) {
+                alert(error);
+            },
+            cancelCallback: function () {
+                console.log('canceled');
+            }
+        };
+        
+        function showLightBox() {
+            Lightbox.Checkout.showLightbox();
+        }
+        
+        function generateSecureHash(time, amount, merchRef, merchantId, terminalId, secretKey) {
+            const hashing = `Amount=${amount}&DateTimeLocalTrxn=${time}&MerchantId=${merchantId}&MerchantReference=${merchRef}&TerminalId=${terminalId}`;
+            
+            console.log("Hashing string:", hashing);
+            console.log("TrxDateTime:", time);
+            
+            // Convert the hexadecimal secret key to a WordArray
+            const secretKeyWordArray = CryptoJS.enc.Hex.parse(secretKey);
+            
+            // Create an HMAC using SHA-256
+            const hmac = CryptoJS.HmacSHA256(hashing, secretKeyWordArray);
+            
+            // Convert the HMAC to a hexadecimal string
+            const hmacHex = hmac.toString(CryptoJS.enc.Hex);
+            const mac = hmacHex.toUpperCase();
+            
+            console.log("Generated MAC:", mac);
+            
+            // FIXED: Return the hash value
+            return mac;
+        }
+    </script>
+</head>
+<body>
+بوابة دفع paysky
+Test-Sample Code to make Transaction using JS function1-V1.1 2.html
+
+    <button onclick="showLightBox()">
+        Make Transaction
+    </button>
+</body>
+</html>
